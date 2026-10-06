@@ -21,7 +21,9 @@ One deep session per day beats many small ones.
 | 2026-10-06 | Bob Shell install (v2.0.5) + `bob --version` + `bob --help` | Toolchain verify | 0 | 0 | Local CLI only; no query sent. |
 | 2026-10-06 | `bob run` (headless, no API key set) | Auth probe | 0 | 0 | Failed fast: "Bob API key is required." No query reached the model. |
 | 2026-10-06 | `bob chat` SSO starts (x3 probes) | SSO login flow | 0 | 0 | Gateway profile check returned 401 as expected pre-login; browser sign-in delegated; no prompt sent. |
-| 2026-10-06 | Smoke query (1 small query, ask mode, max 1 turn) | Phase 1 smoke test | PENDING | — | Runs only after SSO completes. Cap: 1 coin. Result + measured delta appended here. |
+| 2026-10-06 | Smoke query (1 small query, ask mode, max 1 turn) | Phase 1 smoke test | 0 (BLOCKED) | 0 | Not run: CLI SSO sign-in gated in browser at the IBM login (handed off at bob.ibm.com/login); no token landed, no query sent. Do not retry blindly (lockout caution). Phase 2 starts by completing SSO once, then this smoke runs first (cap 1 coin). |
+
+**Close-out 2026-10-06: 0 Bobcoins spent. Remaining: 40/40 (project cap); trial grant 50 (last verified 100% unused 2026-09-29). Trial expires Oct 26, 2026.**
 
 ## Rules
 

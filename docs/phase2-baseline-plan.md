@@ -52,11 +52,17 @@ running "after" demo is the honest evidence pair.
 
 - Bob Shell 2.0.5 installed on the VM (`bob --version`, `bob --help`
   verified; gateway `api.us-east.bob.ibm.com` reachable, pre-login 401 as
-  expected). SSO browser sign-in delegated at kickoff; smoke query (≤1 coin)
-  runs immediately after sign-in completes and is logged in
-  `docs/bobcoin-log.md`.
+  expected). SSO browser sign-in was delegated at kickoff but gated at the
+  IBM login (no token landed; no retry — lockout caution). **Phase 2 step 0:
+  complete the Bob SSO sign-in once (fresh `bob chat` login link + IBM
+  sign-in), then run the ≤1-coin smoke query and log it.** See
+  `docs/bobcoin-log.md` (0 coins spent in Phase 1).
 - StackUp registration: @metismuse "Registered" since 2026-09-26; public
   event page re-checked 2026-10-06 (Theme 2, deadline Oct 18 23:59 ET).
-  Live logged-in status re-verification delegated with the sign-in pass.
-- Repo: `metismuse/bob-modernize-flask-todo` seeded locally from
-  `angelhack-ibm-bob/src/` plus the `legacy/flask-todo/` snapshot above.
+  Live logged-in re-verification still owed (same sign-in pass as above).
+- Repo: `metismuse/bob-modernize-flask-todo` — created and pushed
+  2026-10-06 (seed commit d153a7d + close-out commit): scaffold `src/`,
+  `legacy/flask-todo/` snapshot above, initial README. Trial (records,
+  admin-verified 2026-09-29): Plan Trial, expires **Oct 26, 2026**, 50
+  Bobcoins 100% unused at last check; live re-check rides the step-0
+  sign-in.
