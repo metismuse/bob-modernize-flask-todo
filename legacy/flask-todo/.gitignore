@@ -1,0 +1,6 @@
+.venv
+*.pyc
+*.DS_Store
+runcommands.local.sh
+frontend/gen
+frontend/.webassets-cache
